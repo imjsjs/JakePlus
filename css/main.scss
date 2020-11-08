@@ -66,16 +66,20 @@ body {
     display: block;
 }
 
-.site-title img {
-    filter: invert(1) brightness(100);
-    max-width: 300px;
+.site-title {
+    display: block;
 
-    @media (max-width: 500px) {
-        max-width: 150px;
-    }
-
-    &:hover {
-        filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+    img {
+        filter: invert(1) brightness(100);
+        max-width: 300px;
+    
+        @media (max-width: 500px) {
+            max-width: 150px;
+        }
+    
+        &:hover {
+            filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+        }
     }
 }
 
@@ -164,12 +168,24 @@ body.page {
         .navbar {
             .container {
                 width: auto;
+                .navbar .navbar-nav {
+                    i {
+                        @media (max-width: 500px) {
+                            font-size: 25px;
+                        }
+                    }
+                }
             }
         }
         .site-title {
             max-width: 100px;
             margin-left: 20px;
-            width: 150px;
+            width: 100px;
+            @media (max-width: 500px) {
+                font-size: 25px;
+                width: 75px;
+                max-width: 75px;
+            }
         }
     }
     .wrapper {
