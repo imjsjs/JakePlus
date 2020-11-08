@@ -1,0 +1,161 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #000000;
+$brand-color:      #ffffff;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout"
+;
+
+
+
+// CUSTOM
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(../img/concrete-hires-1-comp.png);
+}
+
+.site-title img {
+    filter: invert(1);
+    max-width: 300px;
+
+    &:hover {
+        filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+    }
+}
+
+.navbar {
+    margin: 5px;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.page-content {
+    padding: 0;
+    flex: 1 0 auto;
+}
+
+#mc_embed_signup {
+    clear:left;
+    width: 300px;
+    text-align: center; 
+    color: #ccc;
+    margin: 50px auto 0;
+
+    input.email {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+    input.button {
+        width: 100%;
+        background: green;
+        color: #ccc;
+        border: 0;
+        padding: 10px;
+
+        &:hover {
+            background: darkgreen;
+        }
+    }
+}
+
+a.button,
+a.button:active,
+a.button:visited {
+    display: block;
+    width: 300px;
+    background: #111;
+    border: solid 2px #ccc;
+    padding: 20px;
+    margin: 10px auto;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+        background: #ccc;
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.site-footer {
+    border-top: none;
+    flex-shrink: 0;
+    color:#cccccc;
+}
+
+body.page {
+    .site-header .wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .navbar {
+            .container {
+                width: auto;
+            }
+        }
+        .site-title {
+            width: 100px;
+            margin-left: 20px;
+        }
+    }
+    .wrapper {
+        max-width: 1024px;
+
+        iframe {
+            border: 0;
+        }
+    }
+}
