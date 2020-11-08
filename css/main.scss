@@ -63,13 +63,16 @@ body {
 }
 
 .site-header {
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
 .site-title img {
-    filter: invert(1);
+    filter: invert(1) brightness(100);
     max-width: 300px;
+
+    @media (max-width: 500px) {
+        max-width: 150px;
+    }
 
     &:hover {
         filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
@@ -166,6 +169,7 @@ body.page {
         .site-title {
             max-width: 100px;
             margin-left: 20px;
+            width: 150px;
         }
     }
     .wrapper {
