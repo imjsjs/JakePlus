@@ -121,6 +121,7 @@ body {
         width: 100%;
         padding: 10px;
         border: 1px solid #000;
+        color: #000;
     }
     input.button {
         width: 100%;
@@ -184,7 +185,7 @@ body.page {
             margin-left: 20px;
             width: 100px;
             margin-top: -10px;
-            
+
             @media (max-width: 500px) {
                 font-size: 25px;
                 width: 75px;
