@@ -95,8 +95,10 @@ body {
     margin: 0;
 
     i {
-        font-size: 40px;
+        font-size: 30px;
         padding: 10px;
+        background: #fff;
+        color: #111;
 
         @media (max-width: 500px) {
             font-size: 30px;
