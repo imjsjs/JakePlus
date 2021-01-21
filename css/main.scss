@@ -17,7 +17,7 @@ $text-color:       #111;
 $background-color: #000000;
 $brand-color:      #ffffff;
 
-$grey-color:       #828282;
+$grey-color:       #999;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
@@ -59,7 +59,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: url(../img/concrete-hires-1-comp.png);
+    background: url(../img/giphy-18.gif);
 }
 
 .site-header {
@@ -68,17 +68,16 @@ body {
 
 .site-title {
     display: block;
+    max-width: 300px;
+    margin: 0 auto;
 
     img {
-        filter: invert(1) brightness(100);
-        max-width: 300px;
-    
         @media (max-width: 500px) {
             max-width: 150px;
         }
     
         &:hover {
-            filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+            filter:  sepia(93%) saturate(1352%) hue-rotate(187deg) brightness(119%) contrast(119%);
         }
     }
 }
@@ -116,7 +115,7 @@ body {
     clear:left;
     max-width: 300px;
     text-align: center; 
-    color: #ccc;
+    color: #f7f7f7;
     margin: 30px auto 0;
 
     input.email {
@@ -128,7 +127,7 @@ body {
     input.button {
         width: 100%;
         background: green;
-        color: #ccc;
+        color: #f7f7f7;
         border: 0;
         padding: 10px;
 
@@ -144,14 +143,14 @@ a.button:visited {
     display: block;
     max-width: 300px;
     background: #111;
-    border: solid 2px #ccc;
+    border: solid 2px #f7f7f7;
     padding: 20px;
     margin: 10px auto;
     text-decoration: none;
     text-align: center;
 
     &:hover {
-        background: #ccc;
+        background: #f7f7f7;
         color: #000;
         text-decoration: none;
     }
@@ -160,7 +159,7 @@ a.button:visited {
 .site-footer {
     border-top: none;
     flex-shrink: 0;
-    color:#cccccc;
+    color:#f7f7f7;
 }
 
 body.page {
@@ -186,7 +185,6 @@ body.page {
             max-width: 100px;
             margin-left: 20px;
             width: 100px;
-            margin-top: -10px;
 
             @media (max-width: 500px) {
                 font-size: 25px;
