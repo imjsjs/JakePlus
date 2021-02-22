@@ -241,6 +241,11 @@ div.pricing-table {
             h3 {
                 font-size: 2em;
             }
+
+            &.muted {
+                background: rgba(50,50,50,0.5);
+                color: #ccc;
+            }
         }
     }
 }
