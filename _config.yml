@@ -1,9 +1,9 @@
 # Site settings
 title: Jake Plus
 email: Jake@JakePlus.com
-description: Stay Positive <3
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://JakePlus.com" # the base hostname & protocol for your site
+description: Indy Artist, Producer, & Engineer
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "https://JakePlus.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
