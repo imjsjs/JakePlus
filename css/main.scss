@@ -52,6 +52,13 @@ $on-laptop:        800px;
 
 
 
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
 // CUSTOM
 html, body {
     height: 100%;
@@ -59,7 +66,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: url(../img/giphy-32.gif);
+    background: url(../img/giphy-tvdark.gif);
 }
 
 .site-header {
@@ -140,7 +147,9 @@ body {
 a.button,
 a.button:active,
 a.button:visited {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 300px;
     background: #111;
     border: solid 2px #f7f7f7;
@@ -215,6 +224,9 @@ body.page {
 
         iframe {
             border: 0;
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
         }
     }
 }
