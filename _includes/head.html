@@ -60,5 +60,16 @@
       src="https://www.facebook.com/tr?id=748949109777934&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->  
+    <script>
+      //custom event tracking
+      function facebookTrackEvent(action) {
+        if (typeof fbq != 'undefined') {
+          fbq('trackCustom', action, {
+            url: location.href
+          });
+          debug('trackCustom: ' + action);
+        }
+      }
+    </script>
 
 </head>
